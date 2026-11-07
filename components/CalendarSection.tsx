@@ -166,12 +166,13 @@ export default function CalendarSection({
       </div>
       
       <div className="mt-4 flex flex-wrap gap-3 text-xs text-gray-600 justify-center">
-          <span className="flex items-center gap-1"><div className="w-3 h-3 bg-red-100 border border-red-200"></div> Cuti</span>
-          <span className="flex items-center gap-1"><div className="w-3 h-3 bg-blue-100 border border-blue-200"></div> Sekolah</span>
-          <span className="flex items-center gap-1"><div className="w-3 h-3 bg-yellow-100 border border-yellow-200"></div> Peperiksaan</span>
-          <span className="flex items-center gap-1"><div className="w-3 h-3 bg-purple-100 border border-purple-200"></div> Program</span>
-          <span className="flex items-center gap-1"><div className="w-3 h-3 bg-green-100 border border-green-200"></div> HEM</span>
-          <span className="flex items-center gap-1"><div className="w-3 h-3 bg-orange-100 border border-orange-200"></div> Kokurikulum</span>
+          <span className="flex items-center gap-1.5"><div className="w-3 h-3 bg-blue-100 border border-blue-300 rounded-xs"></div> Akademik</span>
+          <span className="flex items-center gap-1.5"><div className="w-3 h-3 bg-red-100 border border-red-300 rounded-xs"></div> Cuti</span>
+          <span className="flex items-center gap-1.5"><div className="w-3 h-3 bg-yellow-100 border border-yellow-300 rounded-xs"></div> Peperiksaan</span>
+          <span className="flex items-center gap-1.5"><div className="w-3 h-3 bg-purple-100 border border-purple-300 rounded-xs"></div> Program</span>
+          <span className="flex items-center gap-1.5"><div className="w-3 h-3 bg-green-100 border border-green-300 rounded-xs"></div> HEM</span>
+          <span className="flex items-center gap-1.5"><div className="w-3 h-3 bg-orange-100 border border-orange-300 rounded-xs"></div> Kokurikulum</span>
+          <span className="flex items-center gap-1.5"><div className="w-3 h-3 bg-gray-100 border border-gray-300 rounded-xs"></div> Mesyuarat</span>
       </div>
     </div>
   );

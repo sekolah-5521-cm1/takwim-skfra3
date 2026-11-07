@@ -1,5 +1,5 @@
 import React from 'react';
-import { Activity, Plus, Sparkles, Calendar, Edit, Trash2, CalendarPlus, ArrowRight, Loader2 } from 'lucide-react';
+import { Activity, Plus, Sparkles, Calendar, Edit, Trash2, CalendarPlus, ArrowRight, Loader2, Tag } from 'lucide-react';
 import { SchoolEvent } from '../types';
 import { MONTH_NAMES, CATEGORY_STYLES, CATEGORY_LABELS } from '../constants';
 import { getCategoryIcon, formatEventDateRange } from '../utils';
@@ -177,6 +177,34 @@ export default function Sidebar({
               <p className="text-sm text-gray-500 italic">Tiada acara utama disenaraikan bulan ini.</p>
           )}
         </div>
+
+        {/* Petunjuk Warna Kategori */}
+        <div className="mt-6 pt-5 border-t border-gray-200">
+          <div className="flex items-center justify-between mb-3">
+            <h5 className="text-xs font-bold text-gray-700 uppercase tracking-wider flex items-center gap-1.5">
+              <Tag size={14} className="text-blue-600" />
+              Petunjuk Warna Kategori
+            </h5>
+            <span className="text-[11px] font-medium text-gray-400">7 Kategori</span>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
+            {Object.keys(CATEGORY_LABELS).map((catKey) => {
+              const label = CATEGORY_LABELS[catKey];
+              const style = CATEGORY_STYLES[catKey] || CATEGORY_STYLES.default;
+              return (
+                <div 
+                  key={catKey}
+                  className={`flex items-center gap-2.5 px-3 py-2 rounded-xl border text-xs font-semibold ${style} transition-all duration-200 hover:shadow-xs`}
+                >
+                  <span className="p-1 rounded-md bg-white/60 shadow-xs shrink-0">{getCategoryIcon(catKey)}</span>
+                  <span className="truncate flex-1">{label}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
       </div>
     </div>
   );
